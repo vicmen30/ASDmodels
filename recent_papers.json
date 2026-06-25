@@ -1,0 +1,7 @@
+{
+  "_meta": {
+    "last_updated": "2025-06-01",
+    "window_days": 365,
+    "note": "Auto-updated monthly by GitHub Actions. Each key is a model ID matching MODELS in index.html."
+  }
+}
