@@ -851,7 +851,7 @@
           <i class="ti ti-microscope" aria-hidden="true"></i> Researcher
         </button>
         <button id="modeFamily" onclick="if(!layMode){toggleLayMode()}" style="padding:4px 12px;border:none;cursor:pointer;display:flex;align-items:center;gap:5px;transition:background .15s,color .15s;background:transparent;color:var(--teal)" aria-pressed="false">
-          <i class="ti ti-users" aria-hidden="true"></i> Family
+          <i class="ti ti-world" aria-hidden="true"></i> Public
         </button>
       </div>
       <button class="action-btn" id="checkAllBtn" onclick="checkAllModels()" style="font-size:12px" aria-label="Fetch recent papers for all models">
@@ -870,7 +870,7 @@
   <div id="layBanner" style="display:none;background:var(--teal-bg);border:0.5px solid var(--teal);border-radius:var(--radius);padding:.75rem 1rem;margin-bottom:1rem;align-items:flex-start;gap:10px;font-size:13px;color:var(--teal-text)">
     <i class="ti ti-users" style="font-size:18px;flex-shrink:0;margin-top:1px"></i>
     <div style="flex:1;line-height:1.6">
-      <strong id="bannerModeText">Patient &amp; Family mode — descriptions are written in plain language. Scientific detail has been simplified.</strong><br>
+      <strong id="bannerModeText">Public mode — descriptions are written in plain language. Scientific detail has been simplified.</strong><br>
       <span id="bannerClinicalText" style="font-size:11px;opacity:0.8">This database is for educational purposes only and does not constitute medical advice. Always consult a healthcare professional.</span><br>
       <span style="font-size:11px;opacity:0.7"><i class="ti ti-clock" style="font-size:11px;vertical-align:-1px"></i> <strong>Note:</strong> Plain-language descriptions in this mode reflect published knowledge at the time of writing (June 2026) and are <strong>not</strong> automatically updated by the monthly literature refresh. The <em>Recent literature</em> section within each model card does update live from PubMed. For the most current scientific detail, switch to Researcher mode.</span>
     </div>
@@ -2041,7 +2041,7 @@ function updateModeUI() {
     if (rBtn) { rBtn.style.background = 'transparent'; rBtn.style.color = 'var(--teal)'; rBtn.setAttribute('aria-pressed','false'); }
     if (fBtn) { fBtn.style.background = 'var(--teal)'; fBtn.style.color = 'white'; fBtn.setAttribute('aria-pressed','true'); }
     banner.style.display = 'flex';
-    document.getElementById('bannerModeText').textContent = 'Family mode — plain language descriptions. Switch to Researcher mode for full scientific detail.';
+    document.getElementById('bannerModeText').textContent = 'Public mode — plain language descriptions. Switch to Researcher mode for full scientific detail.';
     document.getElementById('bannerClinicalText').textContent = 'For educational purposes only. Not medical advice. Always consult a healthcare professional.';
     document.getElementById('bannerSwitchBtn').textContent = 'Switch to Researcher mode';
     if (legend) legend.style.display = 'none';
@@ -2401,7 +2401,7 @@ window.addEventListener('DOMContentLoaded', () => {
   </span>
 </footer>
 
-<!-- ── Family mode acknowledgement modal ── -->
+<!-- ── Public mode acknowledgement modal ── -->
 <div id="familyAckModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:400;align-items:center;justify-content:center;padding:1rem">
   <div style="background:var(--bg);border:0.5px solid var(--border);border-radius:12px;max-width:480px;width:100%;padding:2rem;position:relative">
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:1.25rem">
@@ -2411,7 +2411,7 @@ window.addEventListener('DOMContentLoaded', () => {
       <h2 style="font-size:16px;font-weight:600;color:var(--text)">Before you continue</h2>
     </div>
     <p style="font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:1rem">
-      You are about to view the <strong>Patient &amp; Family mode</strong>. This section is written in plain language to help families understand autism research.
+      You are about to view the <strong>Public mode</strong>. This section is written in plain language to help non-specialists understand autism research.
     </p>
     <div style="background:var(--rose-bg);border-left:3px solid #C0392B;border-radius:0 6px 6px 0;padding:.75rem 1rem;margin-bottom:1.25rem;font-size:13px;color:#7F1D1D;line-height:1.65">
       <strong>This database describes animal research only.</strong> None of the treatments or interventions mentioned have been approved for human use based on this data alone. This is not medical advice. Do not start, stop, or change any treatment without consulting a qualified healthcare professional.
